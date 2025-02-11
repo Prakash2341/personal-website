@@ -27,7 +27,34 @@ window.addEventListener("scroll", function () {
 
 });
 
+// expercience count
+// Start date (July 2024)
+const startDate = new Date('2024-07-22');
 
+// Get the current date
+const currentDate = new Date();
+
+// Calculate the difference in months
+const yearDiff = currentDate.getFullYear() - startDate.getFullYear();
+const monthDiff = currentDate.getMonth() - startDate.getMonth();
+const totalMonths = yearDiff * 12 + monthDiff;
+
+// Convert total months to years and remaining months
+const years = Math.floor(totalMonths / 12);
+const months = totalMonths % 12;
+
+// Display the result
+// document.getElementById('monthDifference').textContent = `${years}${months}`;
+document.getElementById('monthDifference').textContent=`${years} year and ${months} month of Experience`
+document.getElementById('exmonthDifference').textContent=`I have ${years} year and ${months} month of Experience of experience as a web developer,
+                    specializing in Angular for front-end
+                    development and SharePoint for backend integration. I’ve worked on building dynamic, single-page
+                    applications, optimizing performance using Lodash for efficient data manipulation. I’ve also
+                    integrated SharePoint as a backend to manage data, document libraries, and workflows. My expertise
+                    includes implementing responsive designs, working with APIs, and using state management solutions
+                    like NgRx. I am committed to writing clean, maintainable code and follow best practices in version
+                    control and automated testing within agile teams.`
+document.getElementById('yearmonthDifference').textContent=`${months} +`
 
 /**
  * navbar toggle
@@ -111,8 +138,8 @@ const form = document.forms['data']
 
 form.addEventListener('submit', e => {
   e.preventDefault()
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-  .then(response => alert("Thank you! your form is submitted successfully." ))
-  .then(() => {  window.location.reload(); })
-  .catch(error => console.error('Error!', error.message))
+  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    .then(response => alert("Thank you! your form is submitted successfully."))
+    .then(() => { window.location.reload(); })
+    .catch(error => console.error('Error!', error.message))
 })
