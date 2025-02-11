@@ -20,6 +20,9 @@
     <!-- 
     - google font link
   -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=business_center" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -106,8 +109,8 @@
                     <picture>
                         <source srcset="./assets/images/profile.png" media="(min-width: 768px)">
                         <source srcset="./assets/images/profile.png" media="(min-width: 500px)">
-                        <img src="./assets/images/profile.png"
-                            alt="A man in a blue shirt with a happy expression" class="w-100">
+                        <img src="./assets/images/profile.png" alt="A man in a blue shirt with a happy expression"
+                            class="w-100">
                     </picture>
 
                 </figure>
@@ -164,23 +167,22 @@
                 <ul class="stats-list">
 
                     <li>
-                        <a href="#" class="stats-card">
+                        <a href="#Experience" class="stats-card">
 
                             <div class="card-icon">
                                 <img src="./assets/images/stats-card_icon-1.png" alt="Badge icon">
                             </div>
 
                             <h2 class="h2 card-title">
-                                6+ <strong>Month of Experience</strong>
+                                <p id="yearmonthDifference"></p><strong id="monthDifference"></strong>
                             </h2>
 
                             <ion-icon name="chevron-forward-outline"></ion-icon>
-
                         </a>
                     </li>
 
                     <li>
-                        <a href="#" class="stats-card">
+                        <a href="#portfolio" class="stats-card">
 
                             <div class="card-icon">
                                 <img src="./assets/images/stats-card_icon-2.png" alt="Checkmark icon">
@@ -213,6 +215,27 @@
 
                 </ul>
             </section>
+            <section id="Experience">
+
+                <h2 class="h3 section-title">Work Experience !</h2>
+                <div style="display: flex;">
+                    <div class="card-icon section-text"> <span class="material-symbols-outlined">
+                            business_center
+                        </span></div><b class="h4 section-title">Organation name : </b><a
+                        href="https://prrca.com/"
+                        style="width: max-content;" target="_blank">PADMANABHAN RAMANI & RAMANUJAM</a>
+                </div>
+                <div style="display: flex;">
+                    <div class="card-icon section-text"> <span class="material-symbols-outlined">
+                            business_center
+                        </span></div><b class="h4 section-title">Client : </b><a
+                        href="https://www.citicorpfinance.co.in/CFIL/citicorpfinance.htm"
+                        style="width: max-content;" target="_blank">Citicorp services India Private Limited.</a>
+
+                </div>
+                <div class="section-text"id="exmonthDifference"></div>
+            </section>
+            
 
 
 
@@ -364,7 +387,7 @@
                             </div>
                         </li>
 
-                         <li>
+                        <li>
                             <div class="skill-card">
                                 <div class="tooltip">Hibernate</div>
 
@@ -373,7 +396,7 @@
                                 </div>
                             </div>
                         </li>
-             
+
                     </ul>
 
                     <ul class="tools-list">
@@ -678,7 +701,9 @@
 
                 </div>
 
-                <form action="https://script.google.com/macros/s/AKfycbykl2raVJtVQ4iuBw3gjq8Lm5b5OPr7Nt8Pq6O-7rDLZmmOhhybRZ6KkVkwaoRIECY34Q/exec" method="post" name="data" class="contact-form">
+                <form
+                    action="https://script.google.com/macros/s/AKfycbykl2raVJtVQ4iuBw3gjq8Lm5b5OPr7Nt8Pq6O-7rDLZmmOhhybRZ6KkVkwaoRIECY34Q/exec"
+                    method="post" name="data" class="contact-form">
 
                     <div class="form-wrapper">
 
@@ -701,8 +726,8 @@
 
                         <div class="input-wrapper">
 
-                            <input type="email" name="email" id="email" required placeholder="e.g prakashvenkat148@mail.com"
-                                class="input-field">
+                            <input type="email" name="email" id="email" required
+                                placeholder="e.g prakashvenkat148@mail.com" class="input-field">
 
                             <ion-icon name="mail"></ion-icon>
 
@@ -766,12 +791,9 @@
                 </a>
             </p>
 
-            
-                <p class="copyright">© Prakash <span id="year"></span>. All Rights Reserved.</p>
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-            
+            <p class="copyright">
+                &copy; 2025 <a href="#">Prakash</a>. All rights reserved
+            </p>
 
         </div>
     </footer>
