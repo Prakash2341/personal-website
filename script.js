@@ -45,8 +45,8 @@ const months = totalMonths % 12;
 
 // Display the result
 // document.getElementById('monthDifference').textContent = `${years}${months}`;
-document.getElementById('monthDifference').textContent=`${years} year and ${months} month of Experience`
-document.getElementById('exmonthDifference').textContent=`I have ${years} year and ${months} month of Experience of experience as a web developer,
+document.getElementById('monthDifference').textContent = `${years} year and ${months} month of Experience`
+document.getElementById('exmonthDifference').textContent = `I have ${years} year and ${months} month of Experience of experience as a web developer,
                     specializing in Angular for front-end
                     development and SharePoint for backend integration. I’ve worked on building dynamic, single-page
                     applications, optimizing performance using Lodash for efficient data manipulation. I’ve also
@@ -54,7 +54,8 @@ document.getElementById('exmonthDifference').textContent=`I have ${years} year a
                     includes implementing responsive designs, working with APIs, and using state management solutions
                     like NgRx. I am committed to writing clean, maintainable code and follow best practices in version
                     control and automated testing within agile teams.`
-document.getElementById('yearmonthDifference').textContent=`${months} +`
+document.getElementById('yearmonthDifference').textContent = `${months} +`
+
 
 /**
  * navbar toggle
