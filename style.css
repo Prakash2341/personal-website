@@ -629,19 +629,17 @@ main {
 .about .btn-secondary {
     margin-bottom: 10px;
 }
-
 .about-banner {
     margin-inline: auto;
     position: relative;
-    max-width: 100%;
-    width: 90vw; /* Adjust width to be 90% of viewport width */
-    overflow: hidden; 
+    max-width: 100%; /* Allow it to scale with screen size */
+    overflow: hidden;
 }
 
 .slide {
     top: 0;
     left: 0;
-    width: 100%; /* Adjust width to take up full container width */
+    width: 100%; /* Full width for responsiveness */
     height: auto;
     opacity: 0; 
     transition: opacity 1s ease-in-out;
@@ -652,6 +650,7 @@ main {
     height: auto;
 }
 
+/* Keyframe for slide animation */
 @keyframes slideShow {
     0%, 100% {
         opacity: 0;
@@ -661,6 +660,7 @@ main {
     }
 }
 
+/* Apply slide animation to all slides */
 .slide:nth-child(1) {
     animation: slideShow 15s infinite;
     animation-delay: 0s;
@@ -678,34 +678,39 @@ main {
     position: absolute;
 }
 
-/* Media Queries for smaller screens */
-@media (max-width: 768px) {
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
     .about-banner {
-        width: 95vw; /* Make container width responsive */
+        max-width: 90%; /* Adjust max width for medium to large screens */
     }
 
     .slide {
-        width: 100%; /* Make slides responsive */
+        width: 90%; /* Make slides smaller on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .about-banner {
+        max-width: 95%; /* Reduce the max width even more for tablets */
+    }
+
+    .slide {
+        width: 100%; /* Make slides take full width on smaller screens */
     }
 }
 
 @media (max-width: 480px) {
     .about-banner {
-        width: 100vw; /* Make container take full width on very small screens */
+        max-width: 100%; /* Full width on mobile */
     }
-    
+
     .slide {
-        width: 100%; /* Make slides full width */
+        width: 100%; /* Full width for mobile screens */
     }
 }
 
 
-
-
-/*-----------------------------------*\
-   * #SKILLS
-  \*-----------------------------------*/
-
+//Skills 
 .skills {
     padding-block: var(--section-padding);
 }
