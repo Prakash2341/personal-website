@@ -615,12 +615,10 @@ main {
 
 .about {
     padding-block: var(--section-padding);
-}
-
-.about-banner {
-    max-width: 400px;
-    margin-inline: auto;
-    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px;
 }
 
 .about .btn {
@@ -634,7 +632,52 @@ main {
 
 
 
+.about-banner {
+    margin-inline: auto;
+    position: relative;
+    max-width: 600px;
+    overflow: hidden; 
+}
 
+.slide {
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: auto;
+    opacity: 0; 
+    transition: opacity 1s ease-in-out; /
+}
+
+.subphoto {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes slideShow {
+    0%, 100% {
+        opacity: 0;
+    }
+    20%, 80% {
+        opacity: 1;
+    }
+}
+
+.slide:nth-child(1) {
+    animation: slideShow 15s infinite;
+    animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+    animation: slideShow 15s infinite;
+    animation-delay: 10s; 
+    position: absolute;
+}
+
+.slide:nth-child(3) {
+    animation: slideShow 15s infinite;
+    animation-delay: 20s; 
+    position: absolute;
+}
 
 /*-----------------------------------*\
    * #SKILLS
@@ -732,7 +775,9 @@ main {
 .skill-card:hover .tooltip {
     transform: translateY(0);
     opacity: 1;
-}.icon{
+}
+
+.icon {
     width: 100%;
     border-radius: 10px;
 }
@@ -1359,24 +1404,6 @@ textarea.input-field {
 
 
     /**
-     * ABOUT
-     */
-
-    .about {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        gap: 30px;
-    }
-
-    .about-banner {
-        margin-bottom: 0;
-    }
-
-
-
-
-    /**
      * SKILLS
      */
 
@@ -1493,12 +1520,11 @@ textarea.input-field {
 
 
 
+
     /**
      * ABOUT
      */
 
-    .about-banner {
-        max-width: 450px;
-    }
+
 
 }
