@@ -630,22 +630,21 @@ main {
     margin-bottom: 10px;
 }
 
-
-
 .about-banner {
     margin-inline: auto;
     position: relative;
-    max-width: 600px;
+    max-width: 100%;
+    width: 90vw; /* Adjust width to be 90% of viewport width */
     overflow: hidden; 
 }
 
 .slide {
     top: 0;
     left: 0;
-    width: 400px;
+    width: 100%; /* Adjust width to take up full container width */
     height: auto;
     opacity: 0; 
-    transition: opacity 1s ease-in-out; /
+    transition: opacity 1s ease-in-out;
 }
 
 .subphoto {
@@ -678,6 +677,30 @@ main {
     animation-delay: 20s; 
     position: absolute;
 }
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    .about-banner {
+        width: 95vw; /* Make container width responsive */
+    }
+
+    .slide {
+        width: 100%; /* Make slides responsive */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-banner {
+        width: 100vw; /* Make container take full width on very small screens */
+    }
+    
+    .slide {
+        width: 100%; /* Make slides full width */
+    }
+}
+
+
+
 
 /*-----------------------------------*\
    * #SKILLS
